@@ -1,0 +1,77 @@
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packit.ai - Simplify Your Move</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-indigo-100 to-purple-100 flex items-center justify-center px-4 py-10">
+
+<div class="max-w-4xl shadow-xl rounded-2xl overflow-hidden bg-white">
+    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-6 px-8 text-center">
+        <h1 class="text-4xl font-extrabold">Simplify Your Move with Packit.ai</h1>
+    </div>
+    <div class="py-10 px-8">
+        <p class="text-lg text-gray-700 mb-8 text-center">
+            Moving is stressful and chaotic. Packit.ai leverages cutting-edge AI and machine learning technology to manage your inventory effortlessly, ensuring a smooth, efficient, and worry-free relocation.
+        </p>
+
+        <form class="flex flex-col md:flex-row items-center justify-center gap-4 mb-8" onsubmit="submitForm(event)">
+            <input type="email" id="email" placeholder="Your email address" class="border rounded-md py-2 px-4 w-full max-w-md" required />
+            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md">
+                Request Your Demo
+            </button>
+        </form>
+
+        <div id="thankYouMessage" class="hidden text-green-600 text-xl font-semibold text-center mb-8">
+            Thanks for your interest! We'll be in touch soon.
+        </div>
+
+        <img src="moving-phone.png" alt="Residential Moving with Phone" class="w-full rounded-lg shadow-md mb-8" />
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mb-10">
+            <div class="shadow-lg p-6 rounded-lg bg-white">
+                <h3 class="font-bold text-xl mb-2 text-indigo-600">AI-Driven Inventory</h3>
+                <p class="text-gray-600">Never manually count again—automatically manage your belongings with AI.</p>
+            </div>
+            <div class="shadow-lg p-6 rounded-lg bg-white">
+                <h3 class="font-bold text-xl mb-2 text-indigo-600">Save Time & Money</h3>
+                <p class="text-gray-600">Pack smarter, transport efficiently, and save significantly on moving costs.</p>
+            </div>
+            <div class="shadow-lg p-6 rounded-lg bg-white">
+                <h3 class="font-bold text-xl mb-2 text-indigo-600">Stress-Free Moves</h3>
+                <p class="text-gray-600">Relax knowing every item is tracked, managed, and delivered securely.</p>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-indigo-600 mb-4 text-center">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+               
+                <blockquote class="italic text-gray-600">"Moving cross-country for my new job felt overwhelming, but Packit.ai made the inventory process seamless." – Alex J.</blockquote>
+            </div>
+            <div>
+                
+                <blockquote class="italic text-gray-600">"Packit.ai allowed us to focus on settling into our new home, not stressing over boxes." – The Smith Family</blockquote>
+            </div>
+            <div>
+                
+                <blockquote class="italic text-gray-600">"Moving for grad school was hectic, but Packit.ai's organization helped me stay calm and efficient." – Priya M.</blockquote>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault();
+        document.querySelector('form').classList.add('hidden');
+        document.getElementById('thankYouMessage').classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>

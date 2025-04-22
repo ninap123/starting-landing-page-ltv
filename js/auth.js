@@ -7,7 +7,13 @@ let currentUser = null;
 function initGoogleAuth() {
   return new Promise((resolve) => {
     gapi.load('auth2', () => {
-      const clientId = '123456789012-example.apps.googleusercontent.com';
+      const clientIdMeta = document.querySelector('meta[name="google-signin-client_id"]');
+      const clientId = clientIdMeta ? clientIdMeta.getAttribute('content') : '';
+      
+      if (!clientId) {
+        console.error('Google Client ID not found. Add a meta tag with name="google-signin-client_id"');
+        return resolve(null);
+      }
       
       gapi.auth2.init({
         client_id: clientId,

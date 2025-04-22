@@ -1,5 +1,5 @@
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'http://localhost:8000'; // Update this URL when deploying
 
 document.addEventListener('DOMContentLoaded', () => {
   initGoogleAuth().then(() => {

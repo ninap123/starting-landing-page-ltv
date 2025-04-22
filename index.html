@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Packit.ai - Simplify Your Move</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google API Library -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body class="min-h-screen bg-gradient-to-b from-indigo-100 to-purple-100 flex items-center justify-center px-4 py-10">
 
@@ -14,11 +16,33 @@
         <h1 class="text-4xl font-extrabold">Simplify Your Move with Packit.ai</h1>
     </div>
     <div class="py-10 px-8">
+        <!-- Auth Button and User Profile -->
+        <div class="flex justify-end mb-4">
+            <button id="authButton" class="bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 font-medium py-2 px-4 rounded-md flex items-center">
+                <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z" fill="#4285F4"/>
+                    <path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z" fill="#34A853" fill-opacity=".5"/>
+                    <path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z" fill="#FBBC05" fill-opacity=".5"/>
+                    <path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z" fill="#EA4335" fill-opacity=".5"/>
+                </svg>
+                Sign in with Google
+            </button>
+        </div>
+        
+        <!-- User Profile Display (Hidden by default) -->
+        <div id="userProfile" class="hidden bg-gray-50 rounded-lg p-4 mb-6 flex items-center">
+            <img id="userImage" src="" alt="Profile" class="w-12 h-12 rounded-full mr-4">
+            <div>
+                <div id="userName" class="font-medium text-gray-800"></div>
+                <div id="userEmail" class="text-sm text-gray-600"></div>
+            </div>
+        </div>
+        
         <p class="text-lg text-gray-700 mb-8 text-center">
             Moving is stressful and chaotic. Packit.ai leverages cutting-edge AI and machine learning technology to manage your inventory effortlessly, ensuring a smooth, efficient, and worry-free relocation.
         </p>
 
-        <form class="flex flex-col md:flex-row items-center justify-center gap-4 mb-8" onsubmit="submitForm(event)">
+        <form class="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
             <input type="email" id="email" placeholder="Your email address" class="border rounded-md py-2 px-4 w-full max-w-md" required />
             <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md">
                 Request Your Demo
@@ -65,13 +89,9 @@
     </div>
 </div>
 
-<script>
-    function submitForm(event) {
-        event.preventDefault();
-        document.querySelector('form').classList.add('hidden');
-        document.getElementById('thankYouMessage').classList.remove('hidden');
-    }
-</script>
+<!-- Load our JavaScript files -->
+<script src="js/auth.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>

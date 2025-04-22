@@ -43,22 +43,38 @@
             Moving is stressful and chaotic. Packit.ai leverages cutting-edge AI and machine learning technology to manage your inventory effortlessly, ensuring a smooth, efficient, and worry-free relocation.
         </p>
 
-        <!-- Google Form Embed -->
+        <!-- Native Contact Form -->
         <div class="w-full max-w-3xl mx-auto mb-8 bg-white rounded-lg shadow-md p-6">
             <h2 class="text-xl font-bold text-indigo-600 mb-4 text-center">Contact Us</h2>
             <p class="text-gray-600 mb-6 text-center">Please fill out this form to learn more about Packit.ai</p>
             
-            <!-- Placeholder for Google Form iframe - Replace with your actual Google Form embed code -->
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
-                <p class="text-gray-500 mb-4">Google Form will be embedded here</p>
-                <p class="text-sm text-gray-400">To create and embed your Google Form:</p>
-                <ol class="text-sm text-gray-400 text-left list-decimal pl-6 space-y-2">
-                    <li>Go to <a href="https://docs.google.com/forms" class="text-indigo-500 hover:underline" target="_blank">Google Forms</a></li>
-                    <li>Create a form with fields for name, role, company, and email</li>
-                    <li>Click "Send" > "Embed" and copy the iframe code</li>
-                    <li>Replace this placeholder with your iframe code</li>
-                </ol>
-            </div>
+            <form id="contactForm" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                        <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required>
+                    </div>
+                    <div>
+                        <label for="role" class="block text-sm font-medium text-gray-700 mb-1">Role</label>
+                        <input type="text" id="role" name="role" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                        Submit
+                    </button>
+                </div>
+            </form>
         </div>
 
         <div id="thankYouMessage" class="hidden text-green-600 text-xl font-semibold text-center mb-8">
